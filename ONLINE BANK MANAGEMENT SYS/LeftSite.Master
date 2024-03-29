@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LeftSite.Master.cs" Inherits="ONLINE_BANK_MANAGEMENT_SYS.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        #sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+        }
+
+        #sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        #content {
+            margin-left: 200px;
+            padding: 16px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="sidebar">
+            <ul>
+                <li><a href="Dashboard.aspx">Dashboard</a></li>
+                <li></li>
+                <li><a>SERVICES:</a></li>
+                <li></li>
+                <li><a href="CheckBalance.aspx">Check Balance</a></li>
+                <li><a href="DepositAmount.aspx">Deposit</a></li>
+                <li><a href="WithdrawAmount.aspx">Withdrawal</a></li>
+                <li><a href="TransferAmount.aspx">Transfer</a></li>
+                
+            </ul>
+        </div>
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
+
